@@ -16,3 +16,25 @@ You can also browse the [docs directory] [2] for more documentation.
 
 [1]: https://chromium.googlesource.com/libyuv/libyuv/+/master/docs/getting_started.md
 [2]: https://chromium.googlesource.com/libyuv/libyuv/+/master/docs/
+
+
+### Building the Library with cmake
+
+Default debug build:
+
+```
+mkdir out
+cd out
+cmake ..
+cmake --build .
+```
+
+Release build/install
+
+```
+mkdir out
+cd out
+cmake -DCMAKE_INSTALL_PREFIX="/usr/lib" -DCMAKE_BUILD_TYPE="Release" ..
+cmake --build . --config Release
+sudo cmake --build . --target install --config Release
+```
